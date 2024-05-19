@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Helvetica', sans-serif;
     background: linear-gradient(45deg, #FF7E5F 0%, #FEB47B 30%, #6A1B9A 100%); /* Gradiente arancione a viola con punti di interruzione */
@@ -62,10 +61,24 @@ input[type="button"]:hover {
     background-color: #e68900; /* Colore del bottone al passaggio del mouse */
 }
 
-#results {
-    font-weight: bold;
-    color: #4caf50; /* Colore dei risultati */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
+}
+
+.results-table th, .results-table td {
+    border: 1px solid #333;
+    padding: 10px;
     text-align: center;
-    font-size: 1.5em;
+}
+
+.results-table th {
+    background-color: #6a1b9a;
+    color: #fff;
+}
+
+.results-table td {
+    background-color: #fff;
+    color: #333;
 }
