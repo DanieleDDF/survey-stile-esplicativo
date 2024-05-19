@@ -1,28 +1,28 @@
 body {
     font-family: 'Helvetica', sans-serif;
-    background: linear-gradient(45deg, #FF7E5F 0%, #FEB47B 30%, #6A1B9A 100%); /* Gradiente arancione a viola con punti di interruzione */
+    background: linear-gradient(45deg, #FF7E5F 0%, #FEB47B 30%, #6A1B9A 100%);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #fff; /* Colore del testo */
+    color: #fff;
 }
 
 .container {
     max-width: 800px;
     margin: 40px;
     padding: 20px;
-    background-color: #fff; /* Sfondo del contenitore */
-    color: #333; /* Colore del testo all'interno del contenitore */
+    background-color: #fff;
+    color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
 h1 {
     text-align: center;
-    color: #6a1b9a; /* Colore del titolo */
+    color: #6a1b9a;
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -32,7 +32,7 @@ h1 {
 }
 
 .question p {
-    color: #6a1b9a; /* Colore delle domande */
+    color: #6a1b9a;
     font-size: 1.2em;
     margin-bottom: 10px;
 }
@@ -40,7 +40,7 @@ h1 {
 label {
     display: block;
     margin: 5px 0;
-    color: #333; /* Colore del testo delle opzioni */
+    color: #333;
     font-size: 1em;
 }
 
@@ -48,8 +48,8 @@ input[type="button"] {
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #ff9800; /* Colore del bottone */
-    color: #fff; /* Colore del testo del bottone */
+    background-color: #ff9800;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -58,7 +58,7 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color: #e68900; /* Colore del bottone al passaggio del mouse */
+    background-color: #e68900;
 }
 
 .results-section {
@@ -92,13 +92,9 @@ input[type="button"]:hover {
     height: 20px;
     background-color: #ff9800;
     position: relative;
-}
-
-.bar::after {
-    content: attr(data-value);
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
     color: #fff;
 }
