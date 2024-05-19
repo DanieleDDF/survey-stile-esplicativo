@@ -1,9 +1,11 @@
-
 function calculateResults() {
     const questions = [
         { id: 'q1', type: 'success', subType: 'PmG' },
         { id: 'q2', type: 'success', subType: 'PvG' },
-        // Aggiungi le altre domande qui con il rispettivo tipo e subTipo
+        { id: 'q3', type: 'success', subType: 'PsG' },
+        { id: 'q4', type: 'success', subType: 'PmG' },
+        { id: 'q5', type: 'failure', subType: 'PmB' },
+        // Aggiungi tutte le altre domande qui con il rispettivo tipo e subTipo
     ];
 
     let scores = {
