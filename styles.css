@@ -1,34 +1,29 @@
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
-}
+function calculateResults() {
+    const questions = [
+        { id: 'q1', type: 'success', subType: 'PmG' },
+        { id: 'q2', type: 'success', subType: 'PvG' },
+        { id: 'q3', type: 'success', subType: 'PsG' },
+        { id: 'q4', type: 'success', subType: 'PmG' },
+        { id: 'q5', type: 'failure', subType: 'PmB' },
+        // Aggiungi tutte le altre domande qui con il rispettivo tipo e subTipo
+    ];
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    let scores = {
+        PmB: 0, PvB: 0, PsB: 0,
+        PmG: 0, PvG: 0, PsG: 0
+    };
 
-h1 {
-    text-align: center;
-}
+    questions.forEach(question => {
+        const answer = document.querySelector(`input[name="${question.id}"]:checked`);
+        if (answer) {
+            const value = answer.value === 'A' ? 1 : 0;
+            scores[question.subType] += value;
+        }
+    });
 
-.question {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin: 5px 0;
-}
-
-#results {
-    font-weight: bold;
-    color: green;
-    margin-top: 20px;
+    document.getElementById('results').innerText = `
+        PmB: ${scores.PmB}, PvB: ${scores.PvB}, PsB: ${scores.PsB},
+        PmG: ${scores.PmG}, PvG: ${scores.PvG}, PsG: ${scores.PsG}
+    `;
 }
