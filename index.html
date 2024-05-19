@@ -11,6 +11,7 @@
     <div class="container">
         <h1>Questionario Stile Esplicativo</h1>
         <form id="questionnaire">
+            <!-- Aggiungi qui tutte le domande -->
             <div class="question">
                 <p>Il progetto che stai dirigendo è un grande successo.</p>
                 <label><input type="radio" name="q1" value="A"> A. Ho fatto molta attenzione al lavoro di ciascuno.</label>
@@ -21,7 +22,22 @@
                 <label><input type="radio" name="q2" value="A"> A. L’ho perdonata/o.</label>
                 <label><input type="radio" name="q2" value="B"> B. In genere tendo a perdonare.</label>
             </div>
-            <!-- Aggiungi le altre domande qui seguendo lo stesso formato -->
+            <div class="question">
+                <p>Hai perso la strada per andare a casa di un amico.</p>
+                <label><input type="radio" name="q3" value="A"> A. Ho mancato di girare a una svolta.</label>
+                <label><input type="radio" name="q3" value="B"> B. Il mio amico mi ha dato un’informazione sbagliata.</label>
+            </div>
+            <div class="question">
+                <p>Il tuo partner ti fa un regalo a sorpresa.</p>
+                <label><input type="radio" name="q4" value="A"> A. Ha avuto un aumento di stipendio.</label>
+                <label><input type="radio" name="q4" value="B"> B. La sera prima l’ho portata/o fuori a cena.</label>
+            </div>
+            <div class="question">
+                <p>Dimentichi il compleanno del tuo partner.</p>
+                <label><input type="radio" name="q5" value="A"> A. Non riesco a ricordare i compleanni.</label>
+                <label><input type="radio" name="q5" value="B"> B. Ero occupata/o con altre cose.</label>
+            </div>
+            <!-- Continua con tutte le altre domande... -->
             <input type="button" onclick="calculateResults()" value="Invia">
         </form>
         <div id="results"></div>
