@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Helvetica', sans-serif;
-    background: linear-gradient(45deg, #FF7E5F 0%, #FFB88C 50%, #6A1B9A 100%); /* Gradiente arancione a viola con sfumatura intermedia */
+    background: linear-gradient(45deg, #FF7E5F 0%, #FEB47B 50%, #6A1B9A 100%); /* Gradiente arancione al viola */
     margin: 0;
     padding: 0;
     display: flex;
