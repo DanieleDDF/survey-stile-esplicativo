@@ -5,12 +5,12 @@ function calculateResults() {
         { id: 'q3', type: 'failure', subType: 'PsB' },
         { id: 'q4', type: 'success', subType: 'PmG' },
         { id: 'q5', type: 'failure', subType: 'PmB' },
-        { id: 'q6', type: 'success', subType: 'PsG' },
+        { id: 'q6', type: 'success', subType: 'PvG' },
         { id: 'q7', type: 'success', subType: 'PmG' },
         { id: 'q8', type: 'failure', subType: 'PmB' },
         { id: 'q9', type: 'failure', subType: 'PvB' },
         { id: 'q10', type: 'success', subType: 'PvG' },
-        { id: 'q11', type: 'success', subType: 'PmG' },
+        { id: 'q11', type: 'success', subType: 'PsG' },
         { id: 'q12', type: 'success', subType: 'PsG' },
         { id: 'q13', type: 'failure', subType: 'PmB' },
         { id: 'q14', type: 'success', subType: 'PmG' },
@@ -22,7 +22,7 @@ function calculateResults() {
         { id: 'q20', type: 'failure', subType: 'PvB' },
         { id: 'q21', type: 'failure', subType: 'PmB' },
         { id: 'q22', type: 'failure', subType: 'PsB' },
-        { id: 'q23', type: 'success', subType: 'PmG' },
+        { id: 'q23', type: 'success', subType: 'PsG' },
         { id: 'q24', type: 'success', subType: 'PvG' },
         { id: 'q25', type: 'failure', subType: 'PmB' },
         { id: 'q26', type: 'success', subType: 'PvG' },
@@ -58,15 +58,34 @@ function calculateResults() {
     questions.forEach(question => {
         const answer = document.querySelector(`input[name="${question.id}"]:checked`);
         if (answer) {
-            const value = answer.value === 'A' ? 1 : 0;
+            let value = 0;
+            if (question.type === 'success') {
+                value = answer.value === 'B' ? 1 : 0; // B = 1, A = 0 per successo
+            } else {
+                value = answer.value === 'A' ? 1 : 0; // A = 1, B = 0 per insuccesso
+            }
             scores[question.subType] += value;
         } else {
             console.error(`No answer selected for question ${question.id}`);
         }
     });
 
-    document.getElementById('results').innerText = `
-        PmB: ${scores.PmB}, PvB: ${scores.PvB}, PsB: ${scores.PsB},
-        PmG: ${scores.PmG}, PvG: ${scores.PvG}, PsG: ${scores.PsG}
+    document.getElementById('results').innerHTML = `
+        <p><strong>Risultati:</strong></p>
+        <p>Permanenza dell'insuccesso (PmB): ${scores.PmB}</p>
+        <p>Pervasività dell'insuccesso (PvB): ${scores.PvB}</p>
+        <p>Personalizzazione dell'insuccesso (PsB): ${scores.PsB}</p>
+        <p>Permanenza del successo (PmG): ${scores.PmG}</p>
+        <p>Pervasività del successo (PvG): ${scores.PvG}</p>
+        <p>Personalizzazione del successo (PsG): ${scores.PsG}</p>
+        <p><strong>Legenda:</strong></p>
+        <ul>
+            <li><strong>PmB</strong>: Permanenza dell'insuccesso</li>
+            <li><strong>PvB</strong>: Pervasività dell'insuccesso</li>
+            <li><strong>PsB</strong>: Personalizzazione dell'insuccesso</li>
+            <li><strong>PmG</strong>: Permanenza del successo</li>
+            <li><strong>PvG</strong>: Pervasività del successo</li>
+            <li><strong>PsG</strong>: Personalizzazione del successo</li>
+        </ul>
     `;
 }
