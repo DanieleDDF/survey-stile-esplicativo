@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Helvetica', sans-serif;
-    background: linear-gradient(45deg, #6A1B9A 0%, #FEB47B 30%, #FF7E5F 100%); /* Gradiente viola a arancione con punti di interruzione */
+    background: linear-gradient(45deg, #FF7E5F 0%, #FEB47B 30%, #6A1B9A 100%); /* Gradiente arancione a viola con punti di interruzione */
     margin: 0;
     padding: 0;
     display: flex;
