@@ -92,11 +92,6 @@ input[type="button"]:hover {
     height: 20px;
     background-color: #ff9800;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #fff;
 }
 
 .bar-value {
