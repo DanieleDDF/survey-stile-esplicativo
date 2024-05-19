@@ -1,19 +1,19 @@
 
 body {
-    font-family: 'Helvetica', sans-serif;
-    background-color: #6a1b9a; /* Colore di sfondo simile al sito */
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradiente lineare basato sui colori dell'immagine */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Altezza minima per coprire l'intera finestra */
+    min-height: 100vh;
     color: #fff; /* Colore del testo */
 }
 
 .container {
     max-width: 800px;
-    margin: 40px; /* Aggiungi margine superiore e inferiore */
+    margin: 40px;
     padding: 20px;
     background-color: #fff; /* Sfondo del contenitore */
     color: #333; /* Colore del testo all'interno del contenitore */
