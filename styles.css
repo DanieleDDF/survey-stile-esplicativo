@@ -1,5 +1,4 @@
 
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #6a1b9a; /* Colore di sfondo simile al sito */
@@ -14,7 +13,7 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 20px;
+    margin: 40px; /* Aggiungi margine superiore e inferiore */
     padding: 20px;
     background-color: #fff; /* Sfondo del contenitore */
     color: #333; /* Colore del testo all'interno del contenitore */
