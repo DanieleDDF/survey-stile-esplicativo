@@ -1,4 +1,3 @@
-
 function calculateResults() {
     const questions = [
         { id: 'q1', type: 'success', subType: 'PmG' },
@@ -71,59 +70,35 @@ function calculateResults() {
         }
     });
 
-    // Log the scores to ensure correctness
-    console.log("Scores:", scores);
-
-    // Calculate the width percentage for each score
-    const maxScore = 8;
-    const widthPmG = (scores.PmG / maxScore) * 100;
-    const widthPvG = (scores.PvG / maxScore) * 100;
-    const widthPsG = (scores.PsG / maxScore) * 100;
-    const widthPmB = (scores.PmB / maxScore) * 100;
-    const widthPvB = (scores.PvB / maxScore) * 100;
-    const widthPsB = (scores.PsB / maxScore) * 100;
-
     document.getElementById('results').innerHTML = `
         <div class="results-section">
             <h2>SUCCESSO</h2>
-            <div class="bar-container">
-                <div class="bar-label">PERMANENZA</div>
-                <div class="bar" style="width: ${widthPmG}%">
-                    <span class="bar-value">${scores.PmG}</span>
-                </div>
+            <div class="result-item">
+                <span class="result-label">PERMANENZA</span>
+                <span class="result-value">${scores.PmG}</span>
             </div>
-            <div class="bar-container">
-                <div class="bar-label">PERVASIVITÀ</div>
-                <div class="bar" style="width: ${widthPvG}%">
-                    <span class="bar-value">${scores.PvG}</span>
-                </div>
+            <div class="result-item">
+                <span class="result-label">PERVASIVITÀ</span>
+                <span class="result-value">${scores.PvG}</span>
             </div>
-            <div class="bar-container">
-                <div class="bar-label">PERSONALIZZAZIONE</div>
-                <div class="bar" style="width: ${widthPsG}%">
-                    <span class="bar-value">${scores.PsG}</span>
-                </div>
+            <div class="result-item">
+                <span class="result-label">PERSONALIZZAZIONE</span>
+                <span class="result-value">${scores.PsG}</span>
             </div>
         </div>
         <div class="results-section">
             <h2>INSUCCESSO</h2>
-            <div class="bar-container">
-                <div class="bar-label">PERMANENZA</div>
-                <div class="bar" style="width: ${widthPmB}%">
-                    <span class="bar-value">${scores.PmB}</span>
-                </div>
+            <div class="result-item">
+                <span class="result-label">PERMANENZA</span>
+                <span class="result-value">${scores.PmB}</span>
             </div>
-            <div class="bar-container">
-                <div class="bar-label">PERVASIVITÀ</div>
-                <div class="bar" style="width: ${widthPvB}%">
-                    <span class="bar-value">${scores.PvB}</span>
-                </div>
+            <div class="result-item">
+                <span class="result-label">PERVASIVITÀ</span>
+                <span class="result-value">${scores.PvB}</span>
             </div>
-            <div class="bar-container">
-                <div class="bar-label">PERSONALIZZAZIONE</div>
-                <div class="bar" style="width: ${widthPsB}%">
-                    <span class="bar-value">${scores.PsB}</span>
-                </div>
+            <div class="result-item">
+                <span class="result-label">PERSONALIZZAZIONE</span>
+                <span class="result-value">${scores.PsB}</span>
             </div>
         </div>
     `;
