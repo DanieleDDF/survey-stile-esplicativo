@@ -1,3 +1,4 @@
+
 function calculateResults() {
     const questions = [
         { id: 'q1', type: 'success', subType: 'PmG' },
