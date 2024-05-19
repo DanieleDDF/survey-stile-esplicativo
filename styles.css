@@ -1,33 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #6a1b9a; /* Colore di sfondo simile al sito */
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff; /* Colore del testo */
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 20px;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Sfondo del contenitore */
+    color: #333; /* Colore del testo all'interno del contenitore */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 h1 {
     text-align: center;
+    color: #6a1b9a; /* Colore del titolo */
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .question {
     margin-bottom: 20px;
 }
 
+.question p {
+    color: #6a1b9a; /* Colore delle domande */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
 label {
     display: block;
     margin: 5px 0;
+    color: #333; /* Colore del testo delle opzioni */
+    font-size: 1em;
+}
+
+input[type="button"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ff9800; /* Colore del bottone */
+    color: #fff; /* Colore del testo del bottone */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+input[type="button"]:hover {
+    background-color: #e68900; /* Colore del bottone al passaggio del mouse */
 }
 
 #results {
     font-weight: bold;
-    color: green;
+    color: #4caf50; /* Colore dei risultati */
     margin-top: 20px;
+    text-align: center;
+    font-size: 1.5em;
 }
