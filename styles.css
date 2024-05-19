@@ -61,24 +61,44 @@ input[type="button"]:hover {
     background-color: #e68900; /* Colore del bottone al passaggio del mouse */
 }
 
-.results-table {
-    width: 100%;
-    border-collapse: collapse;
+.results-section {
     margin-top: 20px;
-}
-
-.results-table th, .results-table td {
     border: 1px solid #333;
     padding: 10px;
+}
+
+.results-section h2 {
+    margin: 0;
+    padding: 10px;
+    background-color: #6a1b9a;
+    color: #fff;
     text-align: center;
 }
 
-.results-table th {
-    background-color: #6a1b9a;
-    color: #fff;
+.bar-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
 }
 
-.results-table td {
-    background-color: #fff;
-    color: #333;
+.bar-label {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.bar {
+    flex: 4;
+    height: 20px;
+    background-color: #ff9800;
+    position: relative;
+}
+
+.bar::after {
+    content: attr(data-value);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
 }
