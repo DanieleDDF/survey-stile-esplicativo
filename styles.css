@@ -1,5 +1,3 @@
-
-
 body {
     font-family: 'Helvetica', sans-serif;
     background: linear-gradient(45deg, #FF7E5F 0%, #FEB47B 30%, #6A1B9A 100%);
@@ -66,40 +64,34 @@ input[type="button"]:hover {
 .results-section {
     margin-top: 20px;
     border: 1px solid #333;
-    padding: 10px;
+    padding: 20px;
 }
 
 .results-section h2 {
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 10px;
-    background-color: #6a1b9a;
-    color: #fff;
     text-align: center;
+    font-size: 1.5em;
+    color: #ff7e5f; /* colore titolo success */
 }
 
-.bar-container {
+.results-section h2:nth-child(2) {
+    color: #6a1b9a; /* colore titolo insuccess */
+}
+
+.result-item {
     display: flex;
-    align-items: center;
-    margin: 10px 0;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-.bar-label {
-    flex: 1;
-    text-align: right;
-    padding-right: 10px;
+.result-label {
+    font-size: 1.2em;
+    color: #333;
 }
 
-.bar {
-    flex: 4;
-    height: 20px;
-    background-color: #ff9800;
-    position: relative;
-}
-
-.bar-value {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.result-value {
+    font-size: 1.2em;
+    color: #333;
     font-weight: bold;
-    color: #fff;
 }
