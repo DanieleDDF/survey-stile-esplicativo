@@ -60,6 +60,8 @@ function calculateResults() {
         if (answer) {
             const value = answer.value === 'A' ? 1 : 0;
             scores[question.subType] += value;
+        } else {
+            console.error(`No answer selected for question ${question.id}`);
         }
     });
 
