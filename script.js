@@ -70,24 +70,27 @@ function calculateResults() {
         }
     });
 
+    // Log the scores to ensure correctness
+    console.log("Scores:", scores);
+
     document.getElementById('results').innerHTML = `
         <div class="results-section">
             <h2>SUCCESSO</h2>
             <div class="bar-container">
                 <div class="bar-label">PERMANENZA</div>
-                <div class="bar" style="width: ${scores.PmG * 12.5}%">
+                <div class="bar" style="width: ${(scores.PmG / 8) * 100}%">
                     <span class="bar-value">${scores.PmG}</span>
                 </div>
             </div>
             <div class="bar-container">
                 <div class="bar-label">PERVASIVITÀ</div>
-                <div class="bar" style="width: ${scores.PvG * 12.5}%">
+                <div class="bar" style="width: ${(scores.PvG / 8) * 100}%">
                     <span class="bar-value">${scores.PvG}</span>
                 </div>
             </div>
             <div class="bar-container">
                 <div class="bar-label">PERSONALIZZAZIONE</div>
-                <div class="bar" style="width: ${scores.PsG * 12.5}%">
+                <div class="bar" style="width: ${(scores.PsG / 8) * 100}%">
                     <span class="bar-value">${scores.PsG}</span>
                 </div>
             </div>
@@ -96,19 +99,19 @@ function calculateResults() {
             <h2>INSUCCESSO</h2>
             <div class="bar-container">
                 <div class="bar-label">PERMANENZA</div>
-                <div class="bar" style="width: ${scores.PmB * 12.5}%">
+                <div class="bar" style="width: ${(scores.PmB / 8) * 100}%">
                     <span class="bar-value">${scores.PmB}</span>
                 </div>
             </div>
             <div class="bar-container">
                 <div class="bar-label">PERVASIVITÀ</div>
-                <div class="bar" style="width: ${scores.PvB * 12.5}%">
+                <div class="bar" style="width: ${(scores.PvB / 8) * 100}%">
                     <span class="bar-value">${scores.PvB}</span>
                 </div>
             </div>
             <div class="bar-container">
                 <div class="bar-label">PERSONALIZZAZIONE</div>
-                <div class="bar" style="width: ${scores.PsB * 12.5}%">
+                <div class="bar" style="width: ${(scores.PsB / 8) * 100}%">
                     <span class="bar-value">${scores.PsB}</span>
                 </div>
             </div>
