@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Helvetica', sans-serif;
-    background: linear-gradient(135deg, #6A1B9A, #FF7E5F); /* Gradiente viola all'arancione */
+    background: linear-gradient(45deg, #FF6A00 0%, #EE0979 50%, #6A1B9A 100%); /* Gradiente lineare basato sui colori dell'immagine */
     margin: 0;
     padding: 0;
     display: flex;
