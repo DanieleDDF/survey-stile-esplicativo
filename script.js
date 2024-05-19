@@ -75,30 +75,42 @@ function calculateResults() {
             <h2>SUCCESSO</h2>
             <div class="bar-container">
                 <div class="bar-label">PERMANENZA</div>
-                <div class="bar" style="width: ${scores.PmG * 12.5}%" data-value="${scores.PmG}"></div>
+                <div class="bar" style="width: ${scores.PmG * 12.5}%">
+                    <span class="bar-value">${scores.PmG}</span>
+                </div>
             </div>
             <div class="bar-container">
                 <div class="bar-label">PERVASIVITÀ</div>
-                <div class="bar" style="width: ${scores.PvG * 12.5}%" data-value="${scores.PvG}"></div>
+                <div class="bar" style="width: ${scores.PvG * 12.5}%">
+                    <span class="bar-value">${scores.PvG}</span>
+                </div>
             </div>
             <div class="bar-container">
                 <div class="bar-label">PERSONALIZZAZIONE</div>
-                <div class="bar" style="width: ${scores.PsG * 12.5}%" data-value="${scores.PsG}"></div>
+                <div class="bar" style="width: ${scores.PsG * 12.5}%">
+                    <span class="bar-value">${scores.PsG}</span>
+                </div>
             </div>
         </div>
         <div class="results-section">
             <h2>INSUCCESSO</h2>
             <div class="bar-container">
                 <div class="bar-label">PERMANENZA</div>
-                <div class="bar" style="width: ${scores.PmB * 12.5}%" data-value="${scores.PmB}"></div>
+                <div class="bar" style="width: ${scores.PmB * 12.5}%">
+                    <span class="bar-value">${scores.PmB}</span>
+                </div>
             </div>
             <div class="bar-container">
                 <div class="bar-label">PERVASIVITÀ</div>
-                <div class="bar" style="width: ${scores.PvB * 12.5}%" data-value="${scores.PvB}"></div>
+                <div class="bar" style="width: ${scores.PvB * 12.5}%">
+                    <span class="bar-value">${scores.PvB}</span>
+                </div>
             </div>
             <div class="bar-container">
                 <div class="bar-label">PERSONALIZZAZIONE</div>
-                <div class="bar" style="width: ${scores.PsB * 12.5}%" data-value="${scores.PsB}"></div>
+                <div class="bar" style="width: ${scores.PsB * 12.5}%">
+                    <span class="bar-value">${scores.PsB}</span>
+                </div>
             </div>
         </div>
     `;
