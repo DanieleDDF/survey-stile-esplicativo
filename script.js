@@ -71,21 +71,68 @@ function calculateResults() {
     });
 
     document.getElementById('results').innerHTML = `
-        <p><strong>Risultati:</strong></p>
-        <p>Permanenza dell'insuccesso (PmB): ${scores.PmB}</p>
-        <p>Pervasività dell'insuccesso (PvB): ${scores.PvB}</p>
-        <p>Personalizzazione dell'insuccesso (PsB): ${scores.PsB}</p>
-        <p>Permanenza del successo (PmG): ${scores.PmG}</p>
-        <p>Pervasività del successo (PvG): ${scores.PvG}</p>
-        <p>Personalizzazione del successo (PsG): ${scores.PsG}</p>
-        <p><strong>Legenda:</strong></p>
-        <ul>
-            <li><strong>PmB</strong>: Permanenza dell'insuccesso</li>
-            <li><strong>PvB</strong>: Pervasività dell'insuccesso</li>
-            <li><strong>PsB</strong>: Personalizzazione dell'insuccesso</li>
-            <li><strong>PmG</strong>: Permanenza del successo</li>
-            <li><strong>PvG</strong>: Pervasività del successo</li>
-            <li><strong>PsG</strong>: Personalizzazione del successo</li>
-        </ul>
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th colspan="3">INSUCCESSO</th>
+                    <th colspan="3">SUCCESSO</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Elevato pessimismo</th>
+                    <th>Moderato pessimismo</th>
+                    <th>Medio</th>
+                    <th>Moderato ottimismo</th>
+                    <th>Elevato ottimismo</th>
+                    <th>Elevato pessimismo</th>
+                    <th>Moderato pessimismo</th>
+                    <th>Medio</th>
+                    <th>Moderato ottimismo</th>
+                    <th>Elevato ottimismo</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>8</th>
+                    <th>7</th>
+                    <th>6</th>
+                    <th>5</th>
+                    <th>4</th>
+                    <th>3</th>
+                    <th>2</th>
+                    <th>1</th>
+                    <th>0</th>
+                    <th>0</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Permanenza</th>
+                    <td colspan="3">${scores.PmB}</td>
+                    <td colspan="6"></td>
+                    <td colspan="3">${scores.PmG}</td>
+                </tr>
+                <tr>
+                    <th>Pervasività</th>
+                    <td colspan="3">${scores.PvB}</td>
+                    <td colspan="6"></td>
+                    <td colspan="3">${scores.PvG}</td>
+                </tr>
+                <tr>
+                    <th>Personalizzazione</th>
+                    <td colspan="3">${scores.PsB}</td>
+                    <td colspan="6"></td>
+                    <td colspan="3">${scores.PsG}</td>
+                </tr>
+            </tbody>
+        </table>
     `;
 }
